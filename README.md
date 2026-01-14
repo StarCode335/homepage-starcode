@@ -2,7 +2,7 @@
 
 Este guia orienta como substituir os placeholders por conteúdos reais, gerenciar itens da equipe e do portfólio, e realizar ajustes básicos de estilo.
 
----
+------
 
 ## 🖼️ Como Gerenciar Imagens
 

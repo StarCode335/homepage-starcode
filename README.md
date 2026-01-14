@@ -15,16 +15,18 @@ Todas as imagens devem ser colocadas na pasta `ASSETS/`.
 
 ### 2. Fotos da Equipe e Prints de Projetos
 
-Atualmente, o código utiliza "Placeholders" (caixas coloridas com ícones). Para colocar fotos reais:
+Agora o código já possui as tags `<img>` prontas. Para alterar as fotos, basta mudar o caminho no atributo `src`:
 
-1. **Equipe**: No `index.html`, localize o bloco `<div class="photo-placeholder">👤</div>` e substitua-o por:
+1. **Equipe**: No `index.html`, localize a tag `<img>` dentro de `.team-photo` e altere o `src`:
    ```html
-   <img src="ASSETS/nome-da-foto.jpg" alt="Nome do Membro" />
+   <img src="ASSETS/fotos-equipe/sua-foto.jpg" alt="Nome do Membro" />
    ```
-2. **Portfólio**: Localize `<div class="screenshot-placeholder">📸 Screenshot</div>` e substitua-o por:
+   _Nota: O site ajusta automaticamente a foto para preencher a moldura (Portrait 3:4)._
+2. **Portfólio**: Localize a tag `<img>` dentro de `.project-screenshot` e altere o `src`:
    ```html
-   <img src="ASSETS/print-projeto.jpg" alt="Nome do Projeto" />
+   <img src="ASSETS/seu-projeto.jpg" alt="Nome do Projeto" />
    ```
+   _Nota: O site ajusta automaticamente o print para preencher a área do carrossel._
 
 ---
 

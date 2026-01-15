@@ -420,6 +420,7 @@ body::before {
   overflow: hidden;
   flex: 1; /* Garante que ocupe o espaço entre os botões */
   position: relative;
+  padding: 10px; /* Evita cortar bordas e sombras em todos os lados */
 }
 
 .carousel-track {
@@ -429,7 +430,7 @@ body::before {
 }
 
 .project-card {
-  width: calc(100% - 20px); /* Deixa espaço lateral para as bordas e sombras */
+  width: calc(100% - 20px); /* Largura total menos as margens laterais */
   margin: 0 10px; /* Garante que o card nunca toque o limite do clipping */
   flex-shrink: 0;
   background: linear-gradient(

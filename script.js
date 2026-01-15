@@ -138,7 +138,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateCarousel() {
       const cardWidth = projectCards[0].offsetWidth;
-      const offset = -(currentIndex * cardWidth);
+      const cardMargin = 20; // 10px de cada lado
+      const totalCardWidth = cardWidth + cardMargin;
+      const offset = -(currentIndex * totalCardWidth);
 
       carouselTrack.style.transform = `translateX(${offset}px)`;
 

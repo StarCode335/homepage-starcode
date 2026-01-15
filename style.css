@@ -574,36 +574,15 @@ body::before {
 }
 
 .team-scroll {
-  display: flex;
-  gap: 2rem;
-  overflow-x: auto;
+  width: 100%;
   padding: 2rem 0;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
 }
 
-/* Estilização da scrollbar */
-.team-scroll::-webkit-scrollbar {
-  height: 8px;
-}
-
-.team-scroll::-webkit-scrollbar-track {
-  background: rgba(62, 151, 201, 0.1);
-  border-radius: 10px;
-}
-
-.team-scroll::-webkit-scrollbar-thumb {
-  background: var(--cor-terciaria);
-  border-radius: 10px;
-}
-
-.team-scroll::-webkit-scrollbar-thumb:hover {
-  background: var(--cor-primaria);
-}
+/* Flickity handles the scroll now */
 
 .team-card {
-  min-width: 350px;
+  width: 350px;
+  margin-right: 2rem;
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.95) 0%,
@@ -617,7 +596,6 @@ body::before {
   box-shadow: 0 12px 40px rgba(31, 113, 177, 0.1),
     0 4px 12px rgba(62, 151, 201, 0.08);
   transition: all 0.4s ease;
-  scroll-snap-align: start;
 }
 
 .team-card:hover {

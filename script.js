@@ -27,10 +27,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (activeSection) {
       activeSection.classList.add("active");
       
-      // Se a seção for portfólio, redimensiona o carrossel do Flickity
-      if (targetSection === "portfolio") {
+      // Se a seção for portfólio ou equipe, redimensiona o carrossel do Flickity
+      if (targetSection === "portfolio" || targetSection === "equipe") {
         setTimeout(() => {
-          const carousel = document.querySelector(".carousel");
+          const carouselSelector = targetSection === "portfolio" ? ".carousel" : ".team-scroll";
+          const carousel = document.querySelector(carouselSelector);
           if (carousel) {
             // Verifica se a instância do Flickity existe
             const flkty = Flickity.data(carousel);
@@ -181,61 +182,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   // ========================================
-  // AUTOPLAY SCROLL EQUIPE
+  // CARROSSEL DE EQUIPE (Flickity)
   // ========================================
-
-  const teamScroll = document.querySelector(".team-scroll");
-  if (teamScroll) {
-    let teamAutoplayInterval;
-    let isUserInteracting = false;
-    let interactionTimeout;
-
-    function autoScrollTeam() {
-      if (!isUserInteracting) {
-        const maxScroll = teamScroll.scrollWidth - teamScroll.clientWidth;
-
-        if (teamScroll.scrollLeft >= maxScroll - 5) {
-          teamScroll.scrollTo({ left: 0, behavior: "smooth" });
-        } else {
-          teamScroll.scrollBy({ left: 300, behavior: "smooth" });
-        }
-      }
-    }
-
-    function startTeamAutoplay() {
-      stopTeamAutoplay();
-      teamAutoplayInterval = setInterval(autoScrollTeam, 4000);
-    }
-
-    function stopTeamAutoplay() {
-      clearInterval(teamAutoplayInterval);
-    }
-
-    teamScroll.addEventListener("mousedown", () => (isUserInteracting = true));
-    teamScroll.addEventListener("touchstart", () => (isUserInteracting = true));
-
-    window.addEventListener("mouseup", () => {
-      clearTimeout(interactionTimeout);
-      interactionTimeout = setTimeout(() => (isUserInteracting = false), 3000);
-    });
-
-    window.addEventListener("touchend", () => {
-      clearTimeout(interactionTimeout);
-      interactionTimeout = setTimeout(() => (isUserInteracting = false), 3000);
-    });
-
-    // Também para o scroll manual simples (scrollbar)
-    teamScroll.addEventListener("scroll", () => {
-      if (!isUserInteracting) {
-        // Se o scroll foi disparado, mas não pela nossa função, é interação do usuário
-        // (O navegador não distingue bem, então usamos um flag no autoScroll se necessário,
-        // mas simplificaremos confiando nos eventos de toque/mouse)
-      }
-    });
-
-    startTeamAutoplay();
-    startTeamAutoplay();
-  }
+  
+  // Flickity handles the carousel automatically via data-flickity attribute in HTML
+  // No manual JS required for basic functionality
 
   // ========================================
   // ANIMAÇÃO DA TIMELINE AO SCROLL

@@ -1,414 +1,333 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Portfólio profissional - Conheça nossos projetos e equipe"
-    />
-    <title>Portfólio</title>
-    <link rel="stylesheet" href="style.css" />
-    <!-- Flickity CSS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <script src="script.js" defer></script>
-    <script
-      src="https://kit.fontawesome.com/3d036248aa.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- Flickity JS -->
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-  </head>
-  <body>
-    <!-- Header -->
-    <header class="header">
-      <div class="container">
-        <div class="logo">
-          <img src="ASSETS/logo.png" alt="StarCode Logo" />
-          <div class="logo-text">
-            <span class="star">Star</span><span class="code">Code</span>
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio profissional - Conheça nossos projetos e equipe" />
+  <title>Portfólio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Flickity CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <script src="script.js" defer></script>
+  <script src="https://kit.fontawesome.com/3d036248aa.js" crossorigin="anonymous"></script>
+  <!-- Flickity JS -->
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="ASSETS/logo.png" alt="StarCode Logo" />
+        <div class="logo-text">
+          <span class="star">Star</span><span class="code">Code</span>
         </div>
+      </div>
 
-        <!-- Navegação Desktop -->
-        <nav class="nav desktop-nav">
-          <a href="#home" class="nav-link active" data-section="home">
-            <i class="fa-regular fa-house"></i>
-          </a>
-          <a href="#portfolio" class="nav-link" data-section="portfolio"
-            >Portfólio</a
-          >
-          <a href="#equipe" class="nav-link" data-section="equipe">Equipe</a>
-        </nav>
+      <!-- Navegação Desktop -->
+      <nav class="nav desktop-nav">
+        <a href="#home" class="nav-link active" data-section="home">
+          <i class="fa-regular fa-house"></i>
+        </a>
+        <a href="#portfolio" class="nav-link" data-section="portfolio">Portfólio</a>
+        <a href="#equipe" class="nav-link" data-section="equipe">Equipe</a>
+      </nav>
 
-        <!-- Botão Hambúrguer Mobile -->
-        <button class="hamburger" id="hamburger" aria-label="Menu">
-          <span></span>
-          <span></span>
-          <span></span>
+      <!-- Botão Hambúrguer Mobile -->
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Menu Mobile -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-inner">
+      <div class="mobile-menu-header">
+        <div class="logo-text">
+          <span class="star">Star</span><span class="code">Code</span>
+        </div>
+        <button class="close-menu" id="closeMenu" aria-label="Fechar menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
         </button>
       </div>
-    </header>
+      <nav class="mobile-nav">
+        <a href="#portfolio" class="mobile-nav-link" data-section="portfolio">Portfólio</a>
+        <a href="#equipe" class="mobile-nav-link" data-section="equipe">Equipe</a>
+      </nav>
+    </div>
+  </div>
 
-    <!-- Menu Mobile -->
-    <div class="mobile-menu" id="mobileMenu">
-      <div class="mobile-menu-inner">
-        <div class="mobile-menu-header">
-          <div class="logo-text">
-            <span class="star">Star</span><span class="code">Code</span>
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Seção Home -->
+    <section id="home" class="section active">
+      <div class="animation-container">
+        <video id="homeVideo" class="home-video" autoplay muted loop playsinline>
+          <source id="videoSource" src="ASSETS/logo-animada2.0.mp4" type="video/mp4" />
+          Seu navegador não suporta a tag de vídeo.
+        </video>
+      </div>
+
+      <!-- Timeline Section -->
+      <div class="timeline-section-container">
+        <h2 class="timeline-title">Nossa Jornada</h2>
+        <div class="timeline">
+          <!-- Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot">
+              <i class="fa-solid fa-rocket"></i>
+            </div>
+            <div class="timeline-content">
+              <i class="fa-solid fa-lightbulb timeline-icon-bg"></i>
+              <span class="timeline-year">Outubro de 2025</span>
+              <h3 style="margin-bottom: 0.5rem; color: var(--cor-secundaria); font-weight: 700;">O Início</h3>
+              <p class="timeline-text">
+                A StarCode surgiu em uma sala de aula do Senac-AL. Mais que um simples projeto acadêmico, o grupo se
+                uniu com o objetivo de transformar a teoria em prática.
+              </p>
+            </div>
           </div>
-          <button class="close-menu" id="closeMenu" aria-label="Fechar menu">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <line x1="18" y1="6" x2="6" y2="18"></line>
-              <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-          </button>
+
+          <!-- Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <div class="timeline-content">
+              <i class="fa-solid fa-code timeline-icon-bg"></i>
+              <span class="timeline-year">2025 - 2026</span>
+              <h3 style="margin-bottom: 0.5rem; color: var(--cor-secundaria); font-weight: 700;">Crescimento</h3>
+              <p class="timeline-text">
+                Esta fase foi marcada pela transformação de ideias em código. Durante meses, a equipe trabalhou
+                intensamente na construção de sistemas funcionais.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot">
+              <i class="fa-solid fa-infinity"></i>
+            </div>
+            <div class="timeline-content">
+              <i class="fa-solid fa-globe timeline-icon-bg"></i>
+              <span class="timeline-year">2025 - Dias Atuais</span>
+              <h3 style="margin-bottom: 0.5rem; color: var(--cor-secundaria); font-weight: 700;">O Futuro</h3>
+              <p class="timeline-text">
+                consolidamos nossa jornada lançando nosso portfólio oficial. Encerramos este ciclo letivo com produtos
+                prontos e uma equipe de desenvolvedores preparada para inovar e atender às reais demandas do mercado de
+                trabalho.
+              </p>
+            </div>
+          </div>
         </div>
-        <nav class="mobile-nav">
-          <a href="#portfolio" class="mobile-nav-link" data-section="portfolio"
-            >Portfólio</a
-          >
-          <a href="#equipe" class="mobile-nav-link" data-section="equipe"
-            >Equipe</a
-          >
-        </nav>
+      </div>
+    </section>
+
+    <!-- Seção Portfólio -->
+    <section id="portfolio" class="section">
+      <div class="portfolio-container">
+        <h2 class="section-title">Nossos Projetos</h2>
+
+        <!-- Flickity Carousel -->
+        <div class="carousel"
+          data-flickity='{ "wrapAround": true, "autoPlay": 5000, "pageDots": true, "prevNextButtons": true }'>
+          <!-- Projeto 1 -->
+          <div class="project-card">
+            <div class="project-screenshot">
+              <img src="ASSETS/projeto1.jpg" alt="Nome do Projeto 1" />
+            </div>
+            <div class="project-info">
+              <h3>Nome do Projeto 1</h3>
+              <p>Breve descrição do projeto e tecnologias utilizadas.</p>
+              <div class="project-links">
+                <a href="#" class="project-link" target="_blank">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Ver Site
+                </a>
+                <a href="#" class="project-link" target="_blank">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                  </svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projeto 2 -->
+          <div class="project-card">
+            <div class="project-screenshot">
+              <img src="ASSETS/projeto2.jpg" alt="Nome do Projeto 2" />
+            </div>
+            <div class="project-info">
+              <h3>Nome do Projeto 2</h3>
+              <p>Breve descrição do projeto e tecnologias utilizadas.</p>
+              <div class="project-links">
+                <a href="#" class="project-link" target="_blank">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Ver Site
+                </a>
+                <a href="#" class="project-link" target="_blank">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                  </svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projeto 3 -->
+          <div class="project-card">
+            <div class="project-screenshot">
+              <img src="ASSETS/projeto3.jpg" alt="Nome do Projeto 3" />
+            </div>
+            <div class="project-info">
+              <h3>Nome do Projeto 3</h3>
+              <p>Breve descrição do projeto e tecnologias utilizadas.</p>
+              <div class="project-links">
+                <a href="#" class="project-link" target="_blank">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Ver Site
+                </a>
+                <a href="#" class="project-link" target="_blank">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                  </svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Equipe -->
+    <section id="equipe" class="section">
+      <div class="team-container">
+        <h2 class="section-title">Nossa Equipe</h2>
+
+        <div class="team-scroll"
+          data-flickity='{ "wrapAround": true, "autoPlay": 4000, "pageDots": true, "prevNextButtons": true }'>
+          <!-- Membro 1 -->
+          <div class="team-card">
+            <div class="team-photo">
+              <img src="ASSETS/fotos-equipe/lucas-equipe.png" alt="Lucas" />
+            </div>
+            <h3>Lucas Barros Brito</h3>
+            <p class="team-role">Dev Junior</p>
+            <p class="team-skills">
+              Competências: Html, Css, Git, JavaScript, React, Node.js
+            </p>
+          </div>
+
+          <!-- Membro 2 -->
+          <div class="team-card">
+            <div class="team-photo">
+              <img src="ASSETS/fotos-equipe/yasmin-equipe.png" alt="Nome do Membro" />
+            </div>
+            <h3>Yasmin Rocha</h3>
+            <p class="team-role">Cargo/Função</p>
+            <p class="team-skills">
+              Competências: Ui/UX, Photoshop, Css, Html
+            </p>
+          </div>
+
+          <!-- Membro 3 -->
+          <div class="team-card">
+            <div class="team-photo">
+              <img src="ASSETS/fotos-equipe/philippe-equipe.png" alt="Philippe" />
+            </div>
+            <h3>Philippe Tavares</h3>
+            <p class="team-role">Cargo/Função</p>
+            <p class="team-skills">
+              Competências: Python, Django, PostgreSQL
+            </p>
+          </div>
+
+          <!-- Membro 4 -->
+          <div class="team-card">
+            <div class="team-photo">
+              <img src="ASSETS/membro4.jpg" alt="Nome do Membro" />
+            </div>
+            <h3>Nome do Membro</h3>
+            <p class="team-role">Cargo/Função</p>
+            <p class="team-skills">
+              Competências: DevOps, Docker, Kubernetes
+            </p>
+          </div>
+
+          <!-- Membro 5 -->
+          <div class="team-card">
+            <div class="team-photo">
+              <img src="ASSETS/membro5.jpg" alt="Nome do Membro" />
+            </div>
+            <h3>Nome do Membro</h3>
+            <p class="team-role">Cargo/Função</p>
+            <p class="team-skills">Competências: Mobile, Flutter, Swift</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="logo">
+        <img src="ASSETS/logo.png" alt="StarCode Logo" />
+      </div>
+      <div class="social-links">
+        <a href="https://wa.me/" target="_blank" class="social-icon" id="whatsapp" aria-label="WhatsApp">
+          <i class="fa-brands fa-whatsapp fa-xl"></i>
+        </a>
+        <a href="https://linkedin.com/" target="_blank" class="social-icon" id="linkedin" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin fa-xl"></i>
+        </a>
+        <a href="https://github.com/" target="_blank" class="social-icon" id="github" aria-label="GitHub">
+          <i class="fa-brands fa-github fa-xl"></i>
+        </a>
+        <a href="https://instagram.com/" target="_blank" class="social-icon" id="instagram" aria-label="Instagram">
+          <i class="fa-brands fa-instagram fa-xl"></i>
+        </a>
+        <a href="mailto:contato@starcode.com" class="social-icon" id="email" aria-label="E-mail">
+          <i class="fa-regular fa-envelope fa-xl"></i>
+        </a>
       </div>
     </div>
+  </footer>
+</body>
 
-    <!-- Main Content -->
-    <main class="main-content">
-      <!-- Seção Home -->
-      <section id="home" class="section active">
-        <div class="animation-container">
-          <video id="homeVideo" class="home-video" autoplay muted loop playsinline>
-            <source id="videoSource" src="ASSETS/logo-animada2.0.mp4" type="video/mp4" />
-            Seu navegador não suporta a tag de vídeo.
-          </video>
-        </div>
-        
-        <!-- Timeline Section -->
-        <div class="timeline-section-container">
-          <h2 class="timeline-title">Nossa Jornada</h2>
-          <div class="timeline">
-            <!-- Item 1 -->
-            <div class="timeline-item">
-              <div class="timeline-dot">
-                <i class="fa-solid fa-rocket"></i>
-              </div>
-              <div class="timeline-content">
-                <i class="fa-solid fa-lightbulb timeline-icon-bg"></i>
-                <span class="timeline-year">Outubro de 2025</span>
-                <h3 style="margin-bottom: 0.5rem; color: var(--cor-secundaria); font-weight: 700;">O Início</h3>
-                <p class="timeline-text">
-                   A StarCode surgiu em uma sala de aula do Senac-AL. Mais que um simples projeto acadêmico, o grupo se uniu com o objetivo de transformar a teoria em prática.
-                </p>
-              </div>
-            </div>
-            
-            <!-- Item 2 -->
-            <div class="timeline-item">
-              <div class="timeline-dot">
-                <i class="fa-solid fa-chart-line"></i>
-              </div>
-              <div class="timeline-content">
-                <i class="fa-solid fa-code timeline-icon-bg"></i>
-                <span class="timeline-year">2025 - 2026</span>
-                <h3 style="margin-bottom: 0.5rem; color: var(--cor-secundaria); font-weight: 700;">Crescimento</h3>
-                <p class="timeline-text">
-                  Esta fase foi marcada pela transformação de ideias em código. Durante meses, a equipe trabalhou intensamente na construção de sistemas funcionais.
-                </p>
-              </div>
-            </div>
-            
-            <!-- Item 3 -->
-            <div class="timeline-item">
-              <div class="timeline-dot">
-                <i class="fa-solid fa-infinity"></i>
-              </div>
-              <div class="timeline-content">
-                <i class="fa-solid fa-globe timeline-icon-bg"></i>
-                <span class="timeline-year">2025 - Dias Atuais</span>
-                <h3 style="margin-bottom: 0.5rem; color: var(--cor-secundaria); font-weight: 700;">O Futuro</h3>
-                <p class="timeline-text">
-                  consolidamos nossa jornada lançando nosso portfólio oficial. Encerramos este ciclo letivo com produtos prontos e uma equipe de desenvolvedores preparada para inovar e atender às reais demandas do mercado de trabalho.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Seção Portfólio -->
-      <section id="portfolio" class="section">
-        <div class="portfolio-container">
-          <h2 class="section-title">Nossos Projetos</h2>
-
-          <!-- Flickity Carousel -->
-          <div
-            class="carousel"
-            data-flickity='{ "wrapAround": true, "autoPlay": 5000, "pageDots": true, "prevNextButtons": true }'
-          >
-            <!-- Projeto 1 -->
-            <div class="project-card">
-              <div class="project-screenshot">
-                <img src="ASSETS/projeto1.jpg" alt="Nome do Projeto 1" />
-              </div>
-              <div class="project-info">
-                <h3>Nome do Projeto 1</h3>
-                <p>Breve descrição do projeto e tecnologias utilizadas.</p>
-                <div class="project-links">
-                  <a href="#" class="project-link" target="_blank">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                      ></path>
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
-                    Ver Site
-                  </a>
-                  <a href="#" class="project-link" target="_blank">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                      ></path>
-                    </svg>
-                    GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Projeto 2 -->
-            <div class="project-card">
-              <div class="project-screenshot">
-                <img src="ASSETS/projeto2.jpg" alt="Nome do Projeto 2" />
-              </div>
-              <div class="project-info">
-                <h3>Nome do Projeto 2</h3>
-                <p>Breve descrição do projeto e tecnologias utilizadas.</p>
-                <div class="project-links">
-                  <a href="#" class="project-link" target="_blank">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                      ></path>
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
-                    Ver Site
-                  </a>
-                  <a href="#" class="project-link" target="_blank">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                      ></path>
-                    </svg>
-                    GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Projeto 3 -->
-            <div class="project-card">
-              <div class="project-screenshot">
-                <img src="ASSETS/projeto3.jpg" alt="Nome do Projeto 3" />
-              </div>
-              <div class="project-info">
-                <h3>Nome do Projeto 3</h3>
-                <p>Breve descrição do projeto e tecnologias utilizadas.</p>
-                <div class="project-links">
-                  <a href="#" class="project-link" target="_blank">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
-                      ></path>
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
-                    Ver Site
-                  </a>
-                  <a href="#" class="project-link" target="_blank">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path
-                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
-                      ></path>
-                    </svg>
-                    GitHub
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Seção Equipe -->
-      <section id="equipe" class="section">
-        <div class="team-container">
-          <h2 class="section-title">Nossa Equipe</h2>
-
-          <div class="team-scroll">
-            <!-- Membro 1 -->
-            <div class="team-card">
-              <div class="team-photo">
-                <img src="ASSETS/fotos-equipe/lucas-equipe.png" alt="Lucas" />
-              </div>
-              <h3>Lucas Barros Brito</h3>
-              <p class="team-role">Dev Junior</p>
-              <p class="team-skills">
-                Competências: Html, Css, Git, JavaScript, React, Node.js
-              </p>
-            </div>
-
-            <!-- Membro 2 -->
-            <div class="team-card">
-              <div class="team-photo">
-                <img src="ASSETS/membro2.jpg" alt="Nome do Membro" />
-              </div>
-              <h3>Nome do Membro</h3>
-              <p class="team-role">Cargo/Função</p>
-              <p class="team-skills">
-                Competências: UI/UX Design, Figma, Adobe XD
-              </p>
-            </div>
-
-            <!-- Membro 3 -->
-            <div class="team-card">
-              <div class="team-photo">
-                <img src="ASSETS/fotos-equipe/philippe-equipe.png" alt="Philippe" />
-              </div>
-              <h3>Philippe Tavares</h3>
-              <p class="team-role">Cargo/Função</p>
-              <p class="team-skills">
-                Competências: Python, Django, PostgreSQL
-              </p>
-            </div>
-
-            <!-- Membro 4 -->
-            <div class="team-card">
-              <div class="team-photo">
-                <img src="ASSETS/membro4.jpg" alt="Nome do Membro" />
-              </div>
-              <h3>Nome do Membro</h3>
-              <p class="team-role">Cargo/Função</p>
-              <p class="team-skills">
-                Competências: DevOps, Docker, Kubernetes
-              </p>
-            </div>
-
-            <!-- Membro 5 -->
-            <div class="team-card">
-              <div class="team-photo">
-                <img src="ASSETS/membro5.jpg" alt="Nome do Membro" />
-              </div>
-              <h3>Nome do Membro</h3>
-              <p class="team-role">Cargo/Função</p>
-              <p class="team-skills">Competências: Mobile, Flutter, Swift</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="logo">
-          <img src="ASSETS/logo.png" alt="StarCode Logo" />
-        </div>
-        <div class="social-links">
-          <a
-            href="https://wa.me/"
-            target="_blank"
-            class="social-icon"
-            id="whatsapp"
-            aria-label="WhatsApp"
-          >
-            <i class="fa-brands fa-whatsapp fa-xl"></i>
-          </a>
-          <a
-            href="https://linkedin.com/"
-            target="_blank"
-            class="social-icon"
-            id="linkedin"
-            aria-label="LinkedIn"
-          >
-            <i class="fa-brands fa-linkedin fa-xl"></i>
-          </a>
-          <a
-            href="https://github.com/"
-            target="_blank"
-            class="social-icon"
-            id="github"
-            aria-label="GitHub"
-          >
-            <i class="fa-brands fa-github fa-xl"></i>
-          </a>
-          <a
-            href="https://instagram.com/"
-            target="_blank"
-            class="social-icon"
-            id="instagram"
-            aria-label="Instagram"
-          >
-            <i class="fa-brands fa-instagram fa-xl"></i>
-          </a>
-          <a
-            href="mailto:contato@starcode.com"
-            class="social-icon"
-            id="email"
-            aria-label="E-mail"
-          >
-            <i class="fa-regular fa-envelope fa-xl"></i>
-          </a>
-        </div>
-      </div>
-    </footer>
-  </body>
 </html>

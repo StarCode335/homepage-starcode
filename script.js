@@ -234,5 +234,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     startTeamAutoplay();
+    startTeamAutoplay();
+  }
+
+  // ========================================
+  // ANIMAÇÃO DA TIMELINE AO SCROLL
+  // ========================================
+  
+  const timelineSection = document.querySelector('.timeline-section-container');
+  
+  if (timelineSection) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          // Optional: Stop observing once visible if you want it to happen only once
+          observer.unobserve(entry.target); 
+        }
+      });
+    }, {
+      threshold: 0.2, // Trigger when 20% of the element is visible
+      rootMargin: "0px" 
+    });
+    
+    observer.observe(timelineSection);
   }
 });

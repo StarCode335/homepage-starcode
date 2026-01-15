@@ -15,10 +15,12 @@
 }
 
 @keyframes subtle-pulse {
+
   0%,
   100% {
     opacity: 0.6;
   }
+
   50% {
     opacity: 0.8;
   }
@@ -26,13 +28,11 @@
 
 body {
   font-family: Urbanist, sans-serif;
-  background: linear-gradient(
-    135deg,
-    #e8f4f8 0%,
-    #d4eaf5 30%,
-    #c5e3f0 60%,
-    #b8dced 100%
-  );
+  background: linear-gradient(135deg,
+      #e8f4f8 0%,
+      #d4eaf5 30%,
+      #c5e3f0 60%,
+      #b8dced 100%);
   color: #2c3e50;
   min-height: 100vh;
   display: flex;
@@ -48,21 +48,15 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(
-      circle at 15% 25%,
+  background: radial-gradient(circle at 15% 25%,
       rgba(62, 151, 201, 0.12) 0%,
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at 85% 75%,
+      transparent 40%),
+    radial-gradient(circle at 85% 75%,
       rgba(75, 172, 217, 0.08) 0%,
-      transparent 40%
-    ),
-    radial-gradient(
-      circle at 50% 50%,
+      transparent 40%),
+    radial-gradient(circle at 50% 50%,
       rgba(31, 113, 177, 0.05) 0%,
-      transparent 50%
-    );
+      transparent 50%);
   pointer-events: none;
   animation: subtle-pulse 8s ease-in-out infinite;
 }
@@ -82,17 +76,16 @@ body::before {
 
 /* Header */
 .header {
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0.95) 0%,
-    rgba(232, 244, 248, 0.92) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(232, 244, 248, 0.92) 100%);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(62, 151, 201, 0.25);
   padding: 1.5rem 0;
   box-shadow: 0 2px 15px rgba(31, 113, 177, 0.08);
-  position: relative;
-  z-index: 10;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
@@ -177,11 +170,9 @@ body::before {
   width: 80%;
   max-width: 320px;
   height: 100vh;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.98) 0%,
-    rgba(232, 244, 248, 0.95) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.98) 0%,
+      rgba(232, 244, 248, 0.95) 100%);
   backdrop-filter: blur(20px);
   box-shadow: -10px 0 30px rgba(31, 113, 177, 0.2);
   transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -247,11 +238,9 @@ body::before {
 
 .mobile-nav-link:hover,
 .mobile-nav-link.active {
-  background: linear-gradient(
-    90deg,
-    rgba(62, 151, 201, 0.1) 0%,
-    transparent 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(62, 151, 201, 0.1) 0%,
+      transparent 100%);
   color: var(--cor-secundaria);
   padding-left: 2.5rem;
 }
@@ -282,11 +271,9 @@ body::before {
   width: 0;
   height: 0;
   border-radius: 50%;
-  background: linear-gradient(
-    135deg,
-    var(--cor-terciaria) 0%,
-    var(--cor-primaria) 100%
-  );
+  background: linear-gradient(135deg,
+      var(--cor-terciaria) 0%,
+      var(--cor-primaria) 100%);
   transform: translate(-50%, -50%);
   transition: width 0.5s, height 0.5s;
   z-index: -1;
@@ -306,11 +293,9 @@ body::before {
 
 /* Estado ativo da navegação */
 .nav-link.active {
-  background: linear-gradient(
-    135deg,
-    var(--cor-terciaria) 0%,
-    var(--cor-primaria) 100%
-  );
+  background: linear-gradient(135deg,
+      var(--cor-terciaria) 0%,
+      var(--cor-primaria) 100%);
   color: #ffffff;
   border-color: transparent;
   box-shadow: 0 4px 15px rgba(62, 151, 201, 0.4);
@@ -323,7 +308,8 @@ body::before {
 /* Main Content */
 .main-content {
   flex: 1;
-  padding: 0; /* Removed padding to allow sections to fill full width/height */
+  padding: 0;
+  /* Removed padding to allow sections to fill full width/height */
   display: flex;
   position: relative;
   z-index: 1;
@@ -347,6 +333,7 @@ body::before {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -358,24 +345,25 @@ body::before {
    ======================================== */
 
 #home {
-  flex: 1; /* Fill the vertical space of main-content */
+  flex: 1;
+  /* Fill the vertical space of main-content */
   width: 100%;
   /* Radial gradient: White center -> Transparent edges (revealing body blue) */
   /* Changed to ellipse to match video aspect ratio better */
-  background: radial-gradient(
-    ellipse at center,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 1) 50%,
-    rgba(255, 255, 255, 0.4) 75%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: radial-gradient(ellipse at center,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(255, 255, 255, 0.4) 75%,
+      rgba(255, 255, 255, 0) 100%);
   min-height: 100%;
-  padding: 2rem; /* Restore padding internal to the section instead of main-content */
+  padding: 2rem;
+  /* Restore padding internal to the section instead of main-content */
 }
 
 .animation-container {
   width: 100%;
-  max-width: 1000px; /* Reduced by ~30% from 1400px */
+  max-width: 1000px;
+  /* Reduced by ~30% from 1400px */
   padding: 2rem;
   display: flex;
   justify-content: center;
@@ -384,7 +372,8 @@ body::before {
 
 .home-video {
   width: 100%;
-  max-width: 100%; /* Removing 600px limit to fill the larger container */
+  max-width: 100%;
+  /* Removing 600px limit to fill the larger container */
   height: auto;
   border-radius: 24px;
   /* White box-shadow to blur the hard edge into the background */
@@ -424,13 +413,12 @@ body::before {
 }
 
 .project-card {
-  width: 100%; /* Mobile full width */
+  width: 100%;
+  /* Mobile full width */
   margin-right: 20px;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.95) 0%,
-    rgba(248, 251, 253, 0.9) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(248, 251, 253, 0.9) 100%);
   border: 1px solid rgba(62, 151, 201, 0.3);
   border-radius: 20px;
   overflow: hidden;
@@ -469,7 +457,8 @@ body::before {
 
 .project-screenshot {
   width: 100%;
-  height: 400px; /* Altura ideal para visibilidade sem esticar demais */
+  height: 400px;
+  /* Altura ideal para visibilidade sem esticar demais */
   background: linear-gradient(135deg, #e8f4f8 0%, #d4eaf5 100%);
   display: flex;
   align-items: center;
@@ -481,7 +470,8 @@ body::before {
 .project-screenshot img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+  object-fit: cover;
+  /* Faz a imagem preencher o espaço sem distorcer */
 }
 
 .screenshot-placeholder {
@@ -583,11 +573,9 @@ body::before {
 .team-card {
   width: 350px;
   margin-right: 2rem;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.95) 0%,
-    rgba(248, 251, 253, 0.9) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(248, 251, 253, 0.9) 100%);
   border: 1px solid rgba(62, 151, 201, 0.3);
   border-radius: 20px;
   padding: 3rem 2rem;
@@ -615,13 +603,15 @@ body::before {
   justify-content: center;
   border: 3px solid var(--cor-terciaria);
   box-shadow: 0 10px 25px rgba(31, 113, 177, 0.15);
-  overflow: hidden; /* Garante que a foto não saia da borda */
+  overflow: hidden;
+  /* Garante que a foto não saia da borda */
 }
 
 .team-photo img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ajusta a foto para preencher o espaço mantendo proporção */
+  object-fit: cover;
+  /* Ajusta a foto para preencher o espaço mantendo proporção */
 }
 
 .photo-placeholder {
@@ -651,11 +641,9 @@ body::before {
 
 /* Footer */
 .footer {
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0.95) 0%,
-    rgba(232, 244, 248, 0.92) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(232, 244, 248, 0.92) 100%);
   backdrop-filter: blur(12px);
   border-top: 1px solid rgba(62, 151, 201, 0.25);
   padding: 1.5rem 0;
@@ -733,14 +721,12 @@ body::before {
 }
 
 #instagram:hover {
-  background: linear-gradient(
-    45deg,
-    #f09433 0%,
-    #e6683c 25%,
-    #dc2743 50%,
-    #cc2366 75%,
-    #bc1888 100%
-  );
+  background: linear-gradient(45deg,
+      #f09433 0%,
+      #e6683c 25%,
+      #dc2743 50%,
+      #cc2366 75%,
+      #bc1888 100%);
   border-color: transparent;
 }
 
@@ -762,7 +748,8 @@ body::before {
 
 #home .animation-container {
   /* Ensure video container takes appropriate space, maybe full viewport initially */
-  min-height: 90vh; /* Make video dominate the first screen */
+  min-height: 90vh;
+  /* Make video dominate the first screen */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -775,7 +762,7 @@ body::before {
   padding: 4rem 2rem;
   position: relative;
   z-index: 2;
-  
+
   /* Scroll Animation Initial State */
   opacity: 0;
   transform: translateY(50px);
@@ -826,16 +813,15 @@ body::before {
 .timeline::before {
   content: "";
   position: absolute;
-  top: 70px; /* Aligned with dot center: 2rem padding (32px) + dot top (20px) + half dot (20px) - half line (2px) = 70px */
+  top: 70px;
+  /* Aligned with dot center: 2rem padding (32px) + dot top (20px) + half dot (20px) - half line (2px) = 70px */
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(
-    90deg,
-    rgba(62, 151, 201, 0.2) 0%,
-    var(--cor-primaria) 50%,
-    rgba(62, 151, 201, 0.2) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(62, 151, 201, 0.2) 0%,
+      var(--cor-primaria) 50%,
+      rgba(62, 151, 201, 0.2) 100%);
   z-index: 0;
   border-radius: 4px;
 }
@@ -845,13 +831,15 @@ body::before {
   z-index: 1;
   flex: 1;
   text-align: center;
-  padding-top: 80px; /* Space for dot */
+  padding-top: 80px;
+  /* Space for dot */
 }
 
 /* Dot */
 .timeline-dot {
   position: absolute;
-  top: 20px; /* Center at 40px top of container */
+  top: 20px;
+  /* Center at 40px top of container */
   left: 50%;
   transform: translateX(-50%);
   width: 40px;
@@ -922,17 +910,16 @@ body::before {
 .timeline-year {
   font-size: 1.8rem;
   font-weight: 800;
-  background: linear-gradient(
-    135deg,
-    var(--cor-secundaria) 0%,
-    var(--cor-primaria) 100%
-  );
+  background: linear-gradient(135deg,
+      var(--cor-secundaria) 0%,
+      var(--cor-primaria) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 0.5rem;
   display: block;
-  font-family: "Outfit", sans-serif; /* Fallback to sans-serif if Outfit not loaded */
+  font-family: "Outfit", sans-serif;
+  /* Fallback to sans-serif if Outfit not loaded */
 }
 
 .timeline-text {
@@ -954,6 +941,7 @@ body::before {
 
 /* Responsividade */
 @media (max-width: 768px) {
+
   /* Esconde navegação desktop e mostra hambúrguer */
   .desktop-nav {
     display: none;
@@ -997,19 +985,23 @@ body::before {
   #home {
     /* Vertical elliptical gradient for mobile to match vertical video */
     /* Smoother gradient transition - extended solid white */
-    background: radial-gradient(
-      ellipse at center 40%,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(255, 255, 255, 1) 70%,
-      rgba(255, 255, 255, 0.8) 90%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    align-items: flex-start; /* Move content to top */
-    padding-top: 30px; /* Distance from header */
-    flex: 0 0 auto; /* Don't expand to fill available vertical space */
-    min-height: auto; /* Allow height to be determined by content */
-    height: 50%; /* Force height to 50% as requested by user */
-    padding-bottom: 2rem; /* Add some space at the bottom */
+    background: radial-gradient(ellipse at center 40%,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 1) 70%,
+        rgba(255, 255, 255, 0.8) 90%,
+        rgba(255, 255, 255, 0) 100%);
+    align-items: flex-start;
+    /* Move content to top */
+    padding-top: 30px;
+    /* Distance from header */
+    flex: 0 0 auto;
+    /* Don't expand to fill available vertical space */
+    min-height: auto;
+    /* Allow height to be determined by content */
+    height: 50%;
+    /* Force height to 50% as requested by user */
+    padding-bottom: 2rem;
+    /* Add some space at the bottom */
   }
 
   .animation-container {
@@ -1020,7 +1012,8 @@ body::before {
   .home-video {
     /* Full width on mobile with reduced shadow spread */
     width: 100%;
-    max-width: 400px; /* Limit width of vertical video so it doesnt get too huge */
+    max-width: 400px;
+    /* Limit width of vertical video so it doesnt get too huge */
     border-radius: 20px;
     /* Soften the edge further with larger spread */
     box-shadow: 0 0 100px 100px #ffffff;
@@ -1116,7 +1109,8 @@ body::before {
   }
 
   .team-scroll {
-    gap: 0; /* Remove gap para alinhar cards individualmente */
+    gap: 0;
+    /* Remove gap para alinhar cards individualmente */
   }
 
   .team-photo {
@@ -1165,7 +1159,7 @@ body::before {
     padding: 2rem 1rem;
     margin-top: 2rem;
   }
-  
+
   .timeline-title {
     font-size: 2rem;
     margin-bottom: 3rem;
@@ -1174,49 +1168,51 @@ body::before {
   .timeline {
     flex-direction: column;
     gap: 3rem;
-    padding-left: 0; /* Removing padding to align dot at start */
+    padding-left: 0;
+    /* Removing padding to align dot at start */
     padding-bottom: 2rem;
   }
-  
+
   /* Vertical Line */
   .timeline::before {
     top: 0;
-    left: 18px; /* Align with dots center (dot width 40, center 20. Line width 4 -> left 18) */
+    left: 18px;
+    /* Align with dots center (dot width 40, center 20. Line width 4 -> left 18) */
     width: 4px;
     height: 100%;
-    background: linear-gradient(180deg, 
-      rgba(62, 151, 201, 0.1) 0%, 
-      var(--cor-primaria) 50%, 
-      rgba(62, 151, 201, 0.1) 100%
-    );
+    background: linear-gradient(180deg,
+        rgba(62, 151, 201, 0.1) 0%,
+        var(--cor-primaria) 50%,
+        rgba(62, 151, 201, 0.1) 100%);
   }
-  
+
   .timeline-item {
     text-align: left;
     padding-top: 0;
-    padding-left: 60px; /* Space for dot + margin */
+    padding-left: 60px;
+    /* Space for dot + margin */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .timeline-dot {
     top: 0;
-    left: 0; 
+    left: 0;
     transform: none;
     margin-top: 5px;
   }
 
   .timeline-item:hover .timeline-dot {
-     transform: scale(1.15);
+    transform: scale(1.15);
   }
-  
+
   .timeline-content {
     width: 100%;
     text-align: left;
     padding: 1.5rem;
   }
-  
+
   .timeline-year {
     font-size: 1.5rem;
   }
@@ -1225,7 +1221,7 @@ body::before {
     width: 4px;
     height: 100%;
   }
-  
+
   /* Adjust Home height for mobile to fit content */
   #home {
     height: auto !important;

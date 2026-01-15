@@ -811,8 +811,23 @@ body::before {
   }
 
   /* Seção Home */
+  #home {
+    /* Push white further out on mobile to ensure video blends */
+    background: radial-gradient(
+      ellipse at center,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 70%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+
   .animation-container {
     padding: 1rem;
+  }
+
+  .home-video {
+    /* Adjust shadow sizing for mobile */
+    box-shadow: 0 0 30px 30px #ffffff;
   }
 
   .animation-placeholder {
